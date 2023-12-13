@@ -1,0 +1,21 @@
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Ajusta la altura según sea necesario */
+  }
+  
+  .blurred-image {
+    width: 30%; /* Ajusta el ancho según sea necesario */
+    filter: blur(0.5px); /* Ajusta el valor de desenfoque según sea necesario */
+  }
+  
+  .footer-text {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  .footer-text p {
+    font-style: italic;
+  }
+  

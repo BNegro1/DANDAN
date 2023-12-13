@@ -14,4 +14,5 @@ export class Tab1Page {
     this.titleService.setTitle('Página Principal');
   }
 
+
 }

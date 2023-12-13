@@ -1,11 +1,37 @@
-.centered-text {
+.poem-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.centered-text p {
-  font-size: 24px;
+.title {
+  font-size: 1.5em;
   font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.poem {
+  text-align: center;
+  font-style: italic;
+  font-size: larger;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.poem p {
+  margin: 0.5em 0;
+  opacity: 0;
+  transform: translateX(-55px); /* Cambiado a desplazamiento hacia la izquierda para la animación */
+  animation: fadeInLeft 1s ease-out forwards; /* Cambiado a fadeInLeft */
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Desplazamiento hacia la derecha original restaurado */
+  }
 }

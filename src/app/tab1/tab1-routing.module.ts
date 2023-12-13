@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-    data: { title: 'Página Principal' } // Agrega esta línea para establecer el título
+    data: { title: '' } 
   }
 ];
 
