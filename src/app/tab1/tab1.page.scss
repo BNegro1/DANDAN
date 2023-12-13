@@ -1,0 +1,11 @@
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.centered-text p {
+  font-size: 24px;
+  font-weight: bold;
+}

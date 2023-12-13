@@ -1,0 +1,20 @@
+/* Agrega este estilo al archivo global.scss o al componente específico */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  animation: fadeIn 1s ease; /* Aplica la animación fadeIn */
+}
+
+/* Estilo para la animación del gráfico */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Agrega estilos adicionales según tus necesidades */
