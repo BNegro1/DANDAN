@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
-  animation: fadeIn 1s ease; /* Aplica la animación fadeIn */
+  height: 400vh; /* Ajusta la altura según tus necesidades */
+  animation: fadeIn 3s ease; /* Aplica la animación fadeIn */
 }
 
 /* Estilo para la animación del gráfico */
@@ -16,5 +16,3 @@
     opacity: 1;
   }
 }
-
-/* Agrega estilos adicionales según tus necesidades */

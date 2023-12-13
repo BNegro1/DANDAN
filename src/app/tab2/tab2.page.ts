@@ -16,7 +16,7 @@ export class Tab2Page implements OnInit {
     const x = this.linspace(-2, 2, 80);
 
     // Ajusta el factor de escala para hacer el corazón más pequeño
-    const scale = 0.5;
+    const scale = 0.2;
 
     const y1 = this.calculateHeartTop(x, scale);
     const yV = this.calculateVShape(x, scale);
@@ -27,16 +27,34 @@ export class Tab2Page implements OnInit {
         labels: x,
         datasets: [
           {
-            label: 'Corazón',
-            data: [...y1, ...yV],
+            label: '',
+            data: y1,
             fill: false,
             borderColor: 'red',
-            tension: 0.1,
+            tension: 3, // Tensión del corazón ("Garabatos" del costado)
+          },
+          {
+            label: '',
+            data: yV,
+            fill: false,
+            borderColor: 'red',
+            tension: 8,  // Tensión del corazón ("Garabatos" del costado)
           },
         ],
       },
       options: {
-        // ...
+        plugins: {
+          legend: {
+            display: false, // Ocultar la leyenda
+          },
+          title: {
+            display: true,
+            text: '4 u DANDAN 🐹',
+            font: {
+              size: 16,
+            },
+          },
+        },
       },
     });
   }
@@ -51,13 +69,8 @@ export class Tab2Page implements OnInit {
   }
 
   calculateVShape(x: number[], scale: number): number[] {
-    // Ajusta el ancho de la "V" modificando el factor de escala
-    const vWidth = 0.02;
-    
-    return x.map(val => scale * (vWidth - Math.abs(val)));
+    const vWidth = 2; //  Invertir cuerpo del corazón
+
+    return x.map(val => scale * (Math.abs(val) - vWidth));
   }
 }
-
-
-
-

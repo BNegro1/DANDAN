@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private titleService: Title) {}
+
+  ionViewWillEnter() {
+    this.titleService.setTitle('Página Principal');
+  }
 
 }

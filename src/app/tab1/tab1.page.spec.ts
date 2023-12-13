@@ -1,26 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
-
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { Tab1Page } from './tab1.page';
 
-describe('Tab1Page', () => {
-  let component: Tab1Page;
-  let fixture: ComponentFixture<Tab1Page>;
+const routes: Routes = [
+  {
+    path: '',
+    component: Tab1Page,
+    data: { title: 'Dan Dan!!!' } // Agrega esta línea para establecer el título
+  }
+];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [Tab1Page],
-      imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(Tab1Page);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class Tab1PageRoutingModule {}
